@@ -1,0 +1,34 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master  # Trigger deployment when pushing to the 'master' branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'  # Choose the Java version you need
+
+      - name: Build the project (if necessary)
+        run: |
+          # If you're using Maven or Gradle, you can add build steps here
+          # For example, if using Maven:
+          # mvn clean install
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.2.0
+        with:
+          branch: gh-pages  # Specify the branch to deploy to (GitHub Pages uses 'gh-pages')
+          folder: resources  # The folder that contains your static content to deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically provides this token for actions
+
