@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class AddBookDAO {
     public int insert(BookBean bb) throws SQLException {
         int rowsAffected = 0;
-        String insertQuery = "INSERT INTO Book62 (code, name, author, price, qty) VALUES (?, ?, ?, ?, ?)";
+        String insertQuery = "INSERT INTO Book62 (bcode,bname,bauthor,bprice,bqty) VALUES (?, ?, ?, ?, ?)";
 
         try (Connection con = DBConnection.getCon();
              PreparedStatement ps = con.prepareStatement(insertQuery)) {

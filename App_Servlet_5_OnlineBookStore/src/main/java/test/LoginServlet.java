@@ -17,7 +17,7 @@ public class LoginServlet extends HttpServlet
 			req.getRequestDispatcher("Msg.jsp").forward(req, res);
 		 }else {
 			 HttpSession hs = req.getSession();//Creating new Session Object
-			 hs.setAttribute("ubean", ub);
+			 hs.setAttribute("ubean",ub);
 			 req.getRequestDispatcher("LoginSuccess.jsp").forward(req, res);
 		 }
 	 }

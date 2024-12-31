@@ -17,7 +17,15 @@
 <h1 class="h3 mb-2 text-center">
 	<%
 String msg = (String)request.getAttribute("msg");
-out.println(msg);
+	
+	if(msg==null)
+	{
+		
+	}
+	else{
+		out.println(msg);
+	}
+
 %>
 </h1>
  <h1 class="h3 mb-2 text-center">Admin,Please sign in</h1>

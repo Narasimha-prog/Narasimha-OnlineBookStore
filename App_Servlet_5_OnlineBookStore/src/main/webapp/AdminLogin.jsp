@@ -26,8 +26,10 @@
             <p class="lead mb-6">
                 <% 
                     AdminBean ab = (AdminBean) session.getAttribute("abean");
+                
                     if (ab != null) {
                         out.println("Welcome Admin: " + ab.getfName() + "<br>");
+                        
                     } else {
                         out.println("No admin logged in.");
                     }
