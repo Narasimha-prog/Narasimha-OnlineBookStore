@@ -4,7 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<<<<<<< HEAD
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.googleapis.com; script-src 'self' 'unsafe-eval';">
+=======
+>>>>>>> master
 <title>Insert title here</title>
 </head>
 <body>
